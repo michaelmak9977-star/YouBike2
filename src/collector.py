@@ -140,19 +140,16 @@ def save_to_csv(df: pd.DataFrame, city: str = "taipei") -> Path:
 
 def _get_next_run_time() -> str:
     """
-    回傳下次採集時間字串（本地時間顯示）。
     以 GitHub Actions cron '*/5 * * * *'（UTC）為基準，
-    計算下一個 UTC 5 分鐘整點後轉換為本地時間。
+    計算下一個 UTC 5 分鐘整點並轉換為本地時間回傳。
     """
     from datetime import timezone, timedelta
     now_utc = datetime.now(timezone.utc)
-    # 計算下一個 UTC 5 分鐘整點（0, 5, 10, ... 55）
     next_minute = (now_utc.minute // 5 + 1) * 5
     if next_minute >= 60:
         next_utc = now_utc.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
     else:
         next_utc = now_utc.replace(minute=next_minute, second=0, microsecond=0)
-    # 轉換為本地時間（台灣 UTC+8）後回傳
     return next_utc.astimezone().strftime("%Y-%m-%d %H:%M:%S")
 
 
