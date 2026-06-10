@@ -178,14 +178,16 @@
   let countdown = 0;
   let refreshTimer = null;
 
-  // 根據 next_run_time 計算距離下次刷新的秒數
-  function calcSecondsUntilRefresh(nextRunTimeStr) {
-    if (!nextRunTimeStr) return 120 + COLLECTION_BUFFER_SEC;
-    const nextRun = new Date(nextRunTimeStr.replace(" ", "T")).getTime();
-    const now = Date.now();
-    const diffSec = Math.ceil((nextRun - now) / 1000) + COLLECTION_BUFFER_SEC;
-    // 若已過時（採集已發生但頁面還沒刷新），立即刷新
-    return diffSec > 0 ? diffSec : COLLECTION_BUFFER_SEC;
+  // 計算距離下一個 GitHub Actions cron 執行時間的秒數
+  // cron: */5 * * * * (UTC) → 每個 UTC 5 分鐘整點執行
+  // 直接用 JS 計算，不依賴 data.js 中的 next_run_time（避免已過期的問題）
+  function calcSecondsUntilRefresh() {
+    const nowUtc = new Date();
+    const minUtc = nowUtc.getUTCMinutes();
+    const secUtc = nowUtc.getUTCSeconds();
+    // 距離下一個 5 分鐘整點的秒數
+    const secsToNextMark = (5 - (minUtc % 5)) * 60 - secUtc;
+    return secsToNextMark + COLLECTION_BUFFER_SEC;
   }
 
   // 啟動對齊排程的倒數計時
@@ -247,8 +249,8 @@
     renderWarning(d.warnings);
     document.getElementById("last-update").textContent = `資料更新：${d.generated_at}`;
 
-    // 根據 next_run_time 對齊倒數，確保頁面刷新時間緊接在採集完成之後
-    startCountdown(calcSecondsUntilRefresh(d.next_run_time));
+    // 計算距離下一個 cron 整點的秒數，確保頁面刷新時間緊接在採集完成之後
+    startCountdown(calcSecondsUntilRefresh());
   }
 
   function renderMetrics(d) {
