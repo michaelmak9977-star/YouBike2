@@ -42,5 +42,6 @@ jobs:
             echo "資料無變動，略過 commit"
           else
             git commit -m "chore: 自動更新 YouBike 採集資料 $(date +'%Y-%m-%d %H:%M UTC')"
+            git pull --rebase
             git push
           fi

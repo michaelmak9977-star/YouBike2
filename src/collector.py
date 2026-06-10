@@ -157,29 +157,55 @@ def export_latest_json(df: pd.DataFrame) -> None:
     """
     將最新快照與歷史趨勢摘要匯出為 data/latest.json，供 index.html 讀取。
     每次採集後呼叫，覆蓋上一次的結果。
+    趨勢採累積模式：讀取現有 latest.json 的 trend，附加本次快照，保留最近 24 小時（288 筆）。
     """
     import glob, json
 
-    # 歷史趨勢：讀取所有 CSV，彙整每個時間點的全市統計
-    all_files = sorted(glob.glob(str(DATA_DIR / "youbike_taipei_*.csv")))
-    if all_files:
-        hist = pd.concat(
-            [pd.read_csv(f, encoding="utf-8-sig") for f in all_files],
-            ignore_index=True,
-        )
-        trend = (
-            hist.groupby("fetched_at")
-            .agg(
-                available_bikes=("available_bikes", "sum"),
-                empty_docks=("empty_docks", "sum"),
-                station_count=("station_id", "nunique"),
+    TREND_MAX = 288  # 5 分鐘間隔 × 288 = 24 小時
+
+    # 本次採集的全市統計快照
+    new_snapshot = {
+        "fetched_at": df["fetched_at"].iloc[0] if len(df) else "",
+        "available_bikes": int(df["available_bikes"].sum()),
+        "empty_docks": int(df["empty_docks"].sum()),
+        "station_count": int(df["station_id"].nunique()),
+    }
+
+    # 讀取現有 latest.json 中的歷史趨勢（跨次執行累積）
+    existing_trend: list[dict] = []
+    json_path = DATA_DIR / "latest.json"
+    if json_path.exists():
+        try:
+            existing = json.loads(json_path.read_text(encoding="utf-8"))
+            existing_trend = existing.get("trend", [])
+        except Exception:
+            existing_trend = []
+
+    # 若 JSON 趨勢為空且本地有 CSV，從 CSV 補齊初始歷史
+    if not existing_trend:
+        all_files = sorted(glob.glob(str(DATA_DIR / "youbike_taipei_*.csv")))
+        if all_files:
+            hist = pd.concat(
+                [pd.read_csv(f, encoding="utf-8-sig") for f in all_files],
+                ignore_index=True,
             )
-            .reset_index()
-            .sort_values("fetched_at")
-        )
-        trend_records = trend.to_dict(orient="records")
-    else:
-        trend_records = []
+            trend_df = (
+                hist.groupby("fetched_at")
+                .agg(
+                    available_bikes=("available_bikes", "sum"),
+                    empty_docks=("empty_docks", "sum"),
+                    station_count=("station_id", "nunique"),
+                )
+                .reset_index()
+                .sort_values("fetched_at")
+            )
+            existing_trend = trend_df.to_dict(orient="records")
+
+    # 合併：避免重複時間戳，附加本次快照，只保留最新 TREND_MAX 筆
+    existing_times = {r["fetched_at"] for r in existing_trend}
+    if new_snapshot["fetched_at"] and new_snapshot["fetched_at"] not in existing_times:
+        existing_trend.append(new_snapshot)
+    trend_records = sorted(existing_trend, key=lambda r: r["fetched_at"])[-TREND_MAX:]
 
     # 行政區統計（最新快照）
     district = (
