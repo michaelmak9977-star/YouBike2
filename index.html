@@ -172,37 +172,58 @@
 </div>
 
 <script>
-  const COLLECTION_BUFFER_SEC = 10;  // 採集完成後等待 data.js 寫入的緩衝秒數
+  const POLL_INTERVAL_SEC = 30;   // 每 30 秒背景偵測一次資料是否更新
+  const FALLBACK_REFRESH_SEC = 360; // 若 6 分鐘內偵測不到更新，強制刷新一次
 
   let trendChart, districtChart, distChart;
   let countdown = 0;
   let refreshTimer = null;
+  let currentGeneratedAt = "";  // 目前顯示的資料時間，用於比對是否有新資料
 
-  // 計算距離下一個 GitHub Actions cron 執行時間的秒數
-  // cron: */5 * * * * (UTC) → 每個 UTC 5 分鐘整點執行
-  // 直接用 JS 計算，不依賴 data.js 中的 next_run_time（避免已過期的問題）
-  function calcSecondsUntilRefresh() {
-    const nowUtc = new Date();
-    const minUtc = nowUtc.getUTCMinutes();
-    const secUtc = nowUtc.getUTCSeconds();
-    // 距離下一個 5 分鐘整點的秒數
-    const secsToNextMark = (5 - (minUtc % 5)) * 60 - secUtc;
-    return secsToNextMark + COLLECTION_BUFFER_SEC;
+  // 背景靜默載入 data.js，回傳 generated_at 字串（不更新畫面）
+  function peekGeneratedAt() {
+    return new Promise((resolve) => {
+      const old = document.querySelector('script[data-ecobike-peek]');
+      if (old) old.remove();
+      const s = document.createElement('script');
+      s.src = 'data/data.js?t=' + Date.now();
+      s.setAttribute('data-ecobike-peek', '1');
+      s.onload = () => resolve(window.ECOBIKE_DATA?.generated_at || "");
+      s.onerror = () => resolve("");
+      document.head.appendChild(s);
+    });
   }
 
-  // 啟動對齊排程的倒數計時
-  function startCountdown(seconds) {
+  // 啟動輪詢：每 POLL_INTERVAL_SEC 秒偵測一次，有新資料立即刷新
+  function startPolling() {
     if (refreshTimer) clearInterval(refreshTimer);
-    countdown = seconds;
-    document.getElementById("countdown").textContent = `下次刷新：${countdown}s`;
-    refreshTimer = setInterval(() => {
-      countdown--;
-      document.getElementById("countdown").textContent = `下次刷新：${countdown}s`;
-      if (countdown <= 0) {
+    countdown = FALLBACK_REFRESH_SEC;
+    updateCountdownDisplay();
+
+    refreshTimer = setInterval(async () => {
+      countdown -= POLL_INTERVAL_SEC;
+      updateCountdownDisplay();
+
+      const latest = await peekGeneratedAt();
+      if (latest && latest !== currentGeneratedAt) {
+        // 偵測到新資料，立即刷新
+        clearInterval(refreshTimer);
+        loadData();
+      } else if (countdown <= 0) {
+        // 超過 fallback 時間仍無更新，強制刷新
         clearInterval(refreshTimer);
         loadData();
       }
-    }, 1000);
+    }, POLL_INTERVAL_SEC * 1000);
+  }
+
+  function updateCountdownDisplay() {
+    const el = document.getElementById("countdown");
+    if (countdown > 0) {
+      el.textContent = `偵測更新中，${countdown}s 後強制刷新`;
+    } else {
+      el.textContent = `正在刷新…`;
+    }
   }
 
   function fmt(n) { return Number(n).toLocaleString(); }
@@ -249,8 +270,9 @@
     renderWarning(d.warnings);
     document.getElementById("last-update").textContent = `資料更新：${d.generated_at}`;
 
-    // 計算距離下一個 cron 整點的秒數，確保頁面刷新時間緊接在採集完成之後
-    startCountdown(calcSecondsUntilRefresh());
+    // 記錄目前資料時間，啟動背景輪詢偵測更新
+    currentGeneratedAt = d.generated_at || "";
+    startPolling();
   }
 
   function renderMetrics(d) {
