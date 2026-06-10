@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# 採集資料（資料量大且每台電腦各自累積，不納入版控）
+data/*.csv
+data/data.js
+data/latest.json
+
+# 系統檔案
+.DS_Store
+Thumbs.db
