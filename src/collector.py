@@ -5,8 +5,10 @@ YouBike 2.0 資料採集服務
 
 import logging
 import time
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
+
+TW_TZ = timezone(timedelta(hours=8))  # 台灣時區 UTC+8
 
 import pandas as pd
 import requests
@@ -141,16 +143,15 @@ def save_to_csv(df: pd.DataFrame, city: str = "taipei") -> Path:
 def _get_next_run_time() -> str:
     """
     以 GitHub Actions cron '*/5 * * * *'（UTC）為基準，
-    計算下一個 UTC 5 分鐘整點並轉換為本地時間回傳。
+    計算下一個 UTC 5 分鐘整點並轉換為台灣時間回傳。
     """
-    from datetime import timezone, timedelta
     now_utc = datetime.now(timezone.utc)
     next_minute = (now_utc.minute // 5 + 1) * 5
     if next_minute >= 60:
         next_utc = now_utc.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
     else:
         next_utc = now_utc.replace(minute=next_minute, second=0, microsecond=0)
-    return next_utc.astimezone().strftime("%Y-%m-%d %H:%M:%S")
+    return next_utc.astimezone(TW_TZ).strftime("%Y-%m-%d %H:%M:%S")
 
 
 def export_latest_json(df: pd.DataFrame) -> None:
@@ -234,7 +235,7 @@ def export_latest_json(df: pd.DataFrame) -> None:
     dist_records = [{"label": k, "count": int(v)} for k, v in dist.items()]
 
     payload = {
-        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "generated_at": datetime.now(TW_TZ).strftime("%Y-%m-%d %H:%M:%S"),
         "latest_fetched_at": df["fetched_at"].iloc[0] if len(df) else "",
         "next_run_time": _get_next_run_time(),
         "total_snapshots": len(trend_records),
@@ -264,7 +265,7 @@ def collect_once() -> bool:
     執行一次完整的採集流程：抓取 → 解析 → 儲存 → 匯出 JSON。
     成功回傳 True，失敗回傳 False。
     """
-    timestamp = datetime.now()
+    timestamp = datetime.now(TW_TZ)
     logger.info(f"===== 採集任務開始：{timestamp.strftime('%Y-%m-%d %H:%M:%S')} =====")
 
     raw_data = fetch_taipei_youbike()
