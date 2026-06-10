@@ -9,10 +9,8 @@ wheels/
 # Virtual environments
 .venv/
 
-# 採集資料（資料量大且每台電腦各自累積，不納入版控）
+# 採集資料：CSV 資料量大不納入版控，但 data.js / latest.json 需追蹤（GitHub Actions 會更新）
 data/*.csv
-data/data.js
-data/latest.json
 
 # 系統檔案
 .DS_Store

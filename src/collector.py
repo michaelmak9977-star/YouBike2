@@ -57,7 +57,7 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
 # 採集間隔（秒）
-FETCH_INTERVAL_SECONDS = 120  # 2 分鐘
+FETCH_INTERVAL_SECONDS = 300  # 5 分鐘
 
 
 # ── 資料抓取 ──────────────────────────────────────────────────────────────────
@@ -139,21 +139,31 @@ def save_to_csv(df: pd.DataFrame, city: str = "taipei") -> Path:
 # ── 單次採集流程 ──────────────────────────────────────────────────────────────
 
 def _get_next_run_time() -> str:
-    """查詢 Windows 工作排程器，回傳下次採集時間字串。無法取得時回傳空字串。"""
-    import subprocess
-    try:
-        cmd = (
-            "(Get-ScheduledTaskInfo -TaskName 'YouBike2_DataCollector').NextRunTime"
-            ".ToString('yyyy-MM-dd HH:mm:ss')"
-        )
-        result = subprocess.run(
-            ["powershell", "-NoProfile", "-Command", cmd],
-            capture_output=True, text=True, timeout=5,
-        )
-        value = result.stdout.strip()
-        return value if value else ""
-    except Exception:
-        return ""
+    """
+    回傳下次採集時間字串。
+    Windows：查詢工作排程器取得精確時間。
+    其他環境（GitHub Actions 等）：以當下時間 + 5 分鐘估算。
+    """
+    import platform
+    if platform.system() == "Windows":
+        import subprocess
+        try:
+            cmd = (
+                "(Get-ScheduledTaskInfo -TaskName 'YouBike2_DataCollector').NextRunTime"
+                ".ToString('yyyy-MM-dd HH:mm:ss')"
+            )
+            result = subprocess.run(
+                ["powershell", "-NoProfile", "-Command", cmd],
+                capture_output=True, text=True, timeout=5,
+            )
+            value = result.stdout.strip()
+            if value:
+                return value
+        except Exception:
+            pass
+    # 非 Windows 或查詢失敗：估算下次執行時間
+    from datetime import timedelta
+    return (datetime.now() + timedelta(seconds=FETCH_INTERVAL_SECONDS)).strftime("%Y-%m-%d %H:%M:%S")
 
 
 def export_latest_json(df: pd.DataFrame) -> None:
