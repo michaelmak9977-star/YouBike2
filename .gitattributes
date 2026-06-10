@@ -1,0 +1,3 @@
+# 資料檔案衝突時永遠採用遠端（雲端 GitHub Actions）版本
+data/data.js merge=ours
+data/latest.json merge=ours
