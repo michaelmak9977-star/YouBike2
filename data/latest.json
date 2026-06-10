@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-11 06:00:37",
-  "latest_fetched_at": "2026-06-11 06:00:34",
-  "next_run_time": "2026-06-11 06:05:37",
-  "total_snapshots": 157,
+  "generated_at": "2026-06-11 06:00:58",
+  "latest_fetched_at": "2026-06-11 06:00:55",
+  "next_run_time": "2026-06-11 06:05:58",
+  "total_snapshots": 158,
   "total_stations": 1762,
   "total_available_bikes": 19060,
   "total_empty_docks": 29437,
@@ -945,6 +945,12 @@
     },
     {
       "fetched_at": "2026-06-11 06:00:34",
+      "available_bikes": 19060,
+      "empty_docks": 29437,
+      "station_count": 1762
+    },
+    {
+      "fetched_at": "2026-06-11 06:00:55",
       "available_bikes": 19060,
       "empty_docks": 29437,
       "station_count": 1762
