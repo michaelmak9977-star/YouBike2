@@ -16,8 +16,13 @@ jobs:
       - name: 取得程式碼
         uses: actions/checkout@v4
 
+      - name: 設定 Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
       - name: 安裝 uv
-        uses: astral-sh/setup-uv@v4
+        uses: astral-sh/setup-uv@v5
         with:
           version: "latest"
 
