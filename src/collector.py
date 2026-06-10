@@ -142,16 +142,12 @@ def save_to_csv(df: pd.DataFrame, city: str = "taipei") -> Path:
 
 def _get_next_run_time() -> str:
     """
-    以 GitHub Actions cron '*/5 * * * *'（UTC）為基準，
-    計算下一個 UTC 5 分鐘整點並轉換為台灣時間回傳。
+    回傳本次採集完成時間加 5 分鐘，作為下次預估採集時間。
+    GitHub Actions cron 實際執行時間可能延遲，此值僅供參考。
     """
-    now_utc = datetime.now(timezone.utc)
-    next_minute = (now_utc.minute // 5 + 1) * 5
-    if next_minute >= 60:
-        next_utc = now_utc.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
-    else:
-        next_utc = now_utc.replace(minute=next_minute, second=0, microsecond=0)
-    return next_utc.astimezone(TW_TZ).strftime("%Y-%m-%d %H:%M:%S")
+    now_tw = datetime.now(TW_TZ)
+    next_tw = now_tw + timedelta(minutes=5)
+    return next_tw.strftime("%Y-%m-%d %H:%M:%S")
 
 
 def export_latest_json(df: pd.DataFrame) -> None:
