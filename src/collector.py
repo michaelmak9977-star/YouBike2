@@ -140,30 +140,20 @@ def save_to_csv(df: pd.DataFrame, city: str = "taipei") -> Path:
 
 def _get_next_run_time() -> str:
     """
-    回傳下次採集時間字串。
-    Windows：查詢工作排程器取得精確時間。
-    其他環境（GitHub Actions 等）：以當下時間 + 5 分鐘估算。
+    回傳下次採集時間字串（本地時間顯示）。
+    以 GitHub Actions cron '*/5 * * * *'（UTC）為基準，
+    計算下一個 UTC 5 分鐘整點後轉換為本地時間。
     """
-    import platform
-    if platform.system() == "Windows":
-        import subprocess
-        try:
-            cmd = (
-                "(Get-ScheduledTaskInfo -TaskName 'YouBike2_DataCollector').NextRunTime"
-                ".ToString('yyyy-MM-dd HH:mm:ss')"
-            )
-            result = subprocess.run(
-                ["powershell", "-NoProfile", "-Command", cmd],
-                capture_output=True, text=True, timeout=5,
-            )
-            value = result.stdout.strip()
-            if value:
-                return value
-        except Exception:
-            pass
-    # 非 Windows 或查詢失敗：估算下次執行時間
-    from datetime import timedelta
-    return (datetime.now() + timedelta(seconds=FETCH_INTERVAL_SECONDS)).strftime("%Y-%m-%d %H:%M:%S")
+    from datetime import timezone, timedelta
+    now_utc = datetime.now(timezone.utc)
+    # 計算下一個 UTC 5 分鐘整點（0, 5, 10, ... 55）
+    next_minute = (now_utc.minute // 5 + 1) * 5
+    if next_minute >= 60:
+        next_utc = now_utc.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
+    else:
+        next_utc = now_utc.replace(minute=next_minute, second=0, microsecond=0)
+    # 轉換為本地時間（台灣 UTC+8）後回傳
+    return next_utc.astimezone().strftime("%Y-%m-%d %H:%M:%S")
 
 
 def export_latest_json(df: pd.DataFrame) -> None:
