@@ -1,18 +1,12 @@
 {
-  "generated_at": "2026-06-11 16:55:30",
-  "latest_fetched_at": "2026-06-11 16:55:27",
-  "next_run_time": "2026-06-11 17:00:30",
+  "generated_at": "2026-06-11 17:00:42",
+  "latest_fetched_at": "2026-06-11 17:00:39",
+  "next_run_time": "2026-06-11 17:05:42",
   "total_snapshots": 288,
   "total_stations": 1762,
-  "total_available_bikes": 20605,
-  "total_empty_docks": 28630,
+  "total_available_bikes": 20545,
+  "total_empty_docks": 28690,
   "trend": [
-    {
-      "fetched_at": "2026-06-10 16:04:05",
-      "available_bikes": 22244,
-      "empty_docks": 27035,
-      "station_count": 1762
-    },
     {
       "fetched_at": "2026-06-10 17:30:34",
       "available_bikes": 19518,
@@ -1734,82 +1728,88 @@
       "available_bikes": 20605,
       "empty_docks": 28630,
       "station_count": 1762
+    },
+    {
+      "fetched_at": "2026-06-11 17:00:39",
+      "available_bikes": 20545,
+      "empty_docks": 28690,
+      "station_count": 1762
     }
   ],
   "district": [
     {
       "district": "信義區",
-      "available_bikes": 14.3
+      "available_bikes": 14.2
     },
     {
       "district": "臺大公館校區",
-      "available_bikes": 14.1
+      "available_bikes": 14.2
     },
     {
       "district": "大同區",
-      "available_bikes": 12.6
-    },
-    {
-      "district": "中正區",
-      "available_bikes": 12.2
-    },
-    {
-      "district": "北投區",
-      "available_bikes": 12.1
+      "available_bikes": 12.5
     },
     {
       "district": "南港區",
+      "available_bikes": 12.0
+    },
+    {
+      "district": "北投區",
+      "available_bikes": 11.9
+    },
+    {
+      "district": "中正區",
       "available_bikes": 11.9
     },
     {
       "district": "萬華區",
-      "available_bikes": 11.8
+      "available_bikes": 11.7
     },
     {
       "district": "中山區",
-      "available_bikes": 11.5
+      "available_bikes": 11.3
+    },
+    {
+      "district": "內湖區",
+      "available_bikes": 11.1
     },
     {
       "district": "文山區",
       "available_bikes": 11.1
     },
     {
-      "district": "內湖區",
-      "available_bikes": 11.0
-    },
-    {
       "district": "大安區",
-      "available_bikes": 10.8
+      "available_bikes": 11.1
     },
     {
       "district": "士林區",
-      "available_bikes": 10.7
+      "available_bikes": 10.6
     },
     {
       "district": "松山區",
-      "available_bikes": 10.7
+      "available_bikes": 10.5
     }
   ],
   "distribution": [
     {
       "label": "0台（無車）",
-      "count": 60
+      "count": 61
     },
     {
       "label": "1-4台",
-      "count": 274
+      "count": 286
     },
     {
       "label": "5-9台",
-      "count": 514
+      "count": 496
     },
     {
       "label": "10-19台",
-      "count": 661
+      "count": 673
     },
     {
       "label": "20台以上",
-      "count": 253
+      "count": 246
     }
   ],
   "warnings": [
@@ -1821,27 +1821,6 @@
       "total_docks": 5
     },
     {
-      "station_name": "YouBike2.0_公館公園",
-      "district": "大安區",
-      "available_bikes": 0,
-      "empty_docks": 30,
-      "total_docks": 30
-    },
-    {
-      "station_name": "YouBike2.0_臺大男六舍前",
-      "district": "大安區",
-      "available_bikes": 0,
-      "empty_docks": 40,
-      "total_docks": 40
-    },
-    {
-      "station_name": "YouBike2.0_臺大土木研究大樓前",
-      "district": "大安區",
-      "available_bikes": 0,
-      "empty_docks": 24,
-      "total_docks": 24
-    },
-    {
       "station_name": "YouBike2.0_捷運古亭站(5號出口)",
       "district": "大安區",
       "available_bikes": 0,
@@ -1849,25 +1828,25 @@
       "total_docks": 14
     },
     {
-      "station_name": "YouBike2.0_忠孝東路四段223巷口(市民大道側)",
-      "district": "大安區",
-      "available_bikes": 0,
-      "empty_docks": 25,
-      "total_docks": 25
-    },
-    {
-      "station_name": "YouBike2.0_八德市場",
-      "district": "大安區",
-      "available_bikes": 0,
-      "empty_docks": 30,
-      "total_docks": 30
-    },
-    {
       "station_name": "YouBike2.0_捷運東門站(3號出口)",
       "district": "大安區",
       "available_bikes": 0,
       "empty_docks": 0,
       "total_docks": 18
+    },
+    {
+      "station_name": "YouBike2.0_基隆長興路口東側",
+      "district": "大安區",
+      "available_bikes": 0,
+      "empty_docks": 15,
+      "total_docks": 15
+    },
+    {
+      "station_name": "YouBike2.0_喬治工商",
+      "district": "大安區",
+      "available_bikes": 0,
+      "empty_docks": 22,
+      "total_docks": 22
     },
     {
       "station_name": "YouBike2.0_和平東建國南路口",
@@ -1884,11 +1863,18 @@
       "total_docks": 25
     },
     {
-      "station_name": "YouBike2.0_捷運忠孝復興站(3號出口)",
+      "station_name": "YouBike2.0_八德市場",
       "district": "大安區",
       "available_bikes": 0,
-      "empty_docks": 37,
-      "total_docks": 37
+      "empty_docks": 30,
+      "total_docks": 30
+    },
+    {
+      "station_name": "YouBike2.0_忠孝東路四段223巷口(市民大道側)",
+      "district": "大安區",
+      "available_bikes": 0,
+      "empty_docks": 25,
+      "total_docks": 25
     },
     {
       "station_name": "YouBike2.0_通安區民活動中心",
@@ -1898,18 +1884,11 @@
       "total_docks": 28
     },
     {
-      "station_name": "YouBike2.0_至誠路一段305巷口",
-      "district": "士林區",
+      "station_name": "YouBike2.0_金華國中",
+      "district": "大安區",
       "available_bikes": 0,
-      "empty_docks": 21,
+      "empty_docks": 20,
       "total_docks": 21
-    },
-    {
-      "station_name": "YouBike2.0_捷運民權西路站(2號出口)",
-      "district": "大同區",
-      "available_bikes": 0,
-      "empty_docks": 25,
-      "total_docks": 25
     },
     {
       "station_name": "YouBike2.0_和平高中(辛亥基隆路口)",
@@ -1919,25 +1898,32 @@
       "total_docks": 55
     },
     {
-      "station_name": "YouBike2.0_金華國中",
-      "district": "大安區",
+      "station_name": "YouBike2.0_至誠路一段305巷口",
+      "district": "士林區",
       "available_bikes": 0,
-      "empty_docks": 20,
+      "empty_docks": 21,
       "total_docks": 21
     },
     {
-      "station_name": "YouBike2.0_考試院",
-      "district": "文山區",
+      "station_name": "YouBike2.0_明倫高中",
+      "district": "大同區",
       "available_bikes": 0,
-      "empty_docks": 39,
-      "total_docks": 39
+      "empty_docks": 32,
+      "total_docks": 32
     },
     {
-      "station_name": "YouBike2.0_捷運動物園站(2號出口)",
-      "district": "文山區",
+      "station_name": "YouBike2.0_捷運中山站(5號出口)",
+      "district": "大同區",
       "available_bikes": 0,
-      "empty_docks": 39,
-      "total_docks": 39
+      "empty_docks": 18,
+      "total_docks": 18
+    },
+    {
+      "station_name": "YouBike2.0_捷運民權西路站(2號出口)",
+      "district": "大同區",
+      "available_bikes": 0,
+      "empty_docks": 25,
+      "total_docks": 25
     },
     {
       "station_name": "YouBike2.0_景興國中",
@@ -1947,11 +1933,32 @@
       "total_docks": 10
     },
     {
-      "station_name": "YouBike2.0_明倫高中",
-      "district": "大同區",
+      "station_name": "YouBike2.0_汀州思源街口東南側",
+      "district": "中正區",
       "available_bikes": 0,
-      "empty_docks": 32,
-      "total_docks": 32
+      "empty_docks": 21,
+      "total_docks": 34
+    },
+    {
+      "station_name": "YouBike2.0_弘道國中",
+      "district": "中正區",
+      "available_bikes": 0,
+      "empty_docks": 33,
+      "total_docks": 33
+    },
+    {
+      "station_name": "YouBike2.0_自來水園區",
+      "district": "中正區",
+      "available_bikes": 0,
+      "empty_docks": 40,
+      "total_docks": 40
+    },
+    {
+      "station_name": "YouBike2.0_捷運善導寺站(3號出口)",
+      "district": "中正區",
+      "available_bikes": 0,
+      "empty_docks": 20,
+      "total_docks": 20
     },
     {
       "station_name": "YouBike2.0_濟南紹興路口",
@@ -1968,18 +1975,25 @@
       "total_docks": 20
     },
     {
-      "station_name": "YouBike2.0_汀州思源街口東南側",
+      "station_name": "YouBike2.0_中華路二段409巷口",
       "district": "中正區",
       "available_bikes": 0,
-      "empty_docks": 21,
-      "total_docks": 34
+      "empty_docks": 15,
+      "total_docks": 15
     },
     {
-      "station_name": "YouBike2.0_北安明水路口(自強隧道)",
-      "district": "中山區",
+      "station_name": "YouBike2.0_考試院",
+      "district": "文山區",
       "available_bikes": 0,
-      "empty_docks": 12,
-      "total_docks": 12
+      "empty_docks": 39,
+      "total_docks": 39
+    },
+    {
+      "station_name": "YouBike2.0_捷運動物園站(2號出口)",
+      "district": "文山區",
+      "available_bikes": 0,
+      "empty_docks": 39,
+      "total_docks": 39
     },
     {
       "station_name": "YouBike2.0_中山北路二段59巷口",
@@ -1987,20 +2001,6 @@
       "available_bikes": 0,
       "empty_docks": 12,
       "total_docks": 12
-    },
-    {
-      "station_name": "YouBike2.0_八德市場(北側)",
-      "district": "中山區",
-      "available_bikes": 0,
-      "empty_docks": 29,
-      "total_docks": 29
-    },
-    {
-      "station_name": "YouBike2.0_捷運南京復興站(8號出口)",
-      "district": "中山區",
-      "available_bikes": 0,
-      "empty_docks": 25,
-      "total_docks": 25
     },
     {
       "station_name": "YouBike2.0_林安泰古厝",
@@ -2017,11 +2017,18 @@
       "total_docks": 42
     },
     {
-      "station_name": "YouBike2.0_林森濟南路口(東北側)",
+      "station_name": "YouBike2.0_捷運善導寺站(5號出口)",
       "district": "中正區",
       "available_bikes": 0,
-      "empty_docks": 26,
-      "total_docks": 26
+      "empty_docks": 31,
+      "total_docks": 31
+    },
+    {
+      "station_name": "YouBike2.0_臺大醫院兒童醫院",
+      "district": "中正區",
+      "available_bikes": 0,
+      "empty_docks": 22,
+      "total_docks": 22
     },
     {
       "station_name": "YouBike2.0_林森北平路口",
@@ -2029,20 +2036,6 @@
       "available_bikes": 0,
       "empty_docks": 20,
       "total_docks": 20
-    },
-    {
-      "station_name": "YouBike2.0_捷運善導寺站(3號出口)",
-      "district": "中正區",
-      "available_bikes": 0,
-      "empty_docks": 20,
-      "total_docks": 20
-    },
-    {
-      "station_name": "YouBike2.0_潭美街213號",
-      "district": "內湖區",
-      "available_bikes": 0,
-      "empty_docks": 12,
-      "total_docks": 12
     },
     {
       "station_name": "YouBike2.0_東湖一號公園",
@@ -2059,18 +2052,18 @@
       "total_docks": 14
     },
     {
-      "station_name": "YouBike2.0_大度立德路口",
-      "district": "北投區",
-      "available_bikes": 0,
-      "empty_docks": 24,
-      "total_docks": 24
-    },
-    {
       "station_name": "YouBike2.0_承德路七段401巷(洲美橋下)",
       "district": "北投區",
       "available_bikes": 0,
       "empty_docks": 25,
       "total_docks": 25
+    },
+    {
+      "station_name": "YouBike2.0_榮富公園",
+      "district": "北投區",
+      "available_bikes": 0,
+      "empty_docks": 13,
+      "total_docks": 13
     },
     {
       "station_name": "YouBike2.0_南京新生路口(北側)",
@@ -2080,6 +2073,20 @@
       "total_docks": 24
     },
     {
+      "station_name": "YouBike2.0_潭美街213號",
+      "district": "內湖區",
+      "available_bikes": 0,
+      "empty_docks": 12,
+      "total_docks": 12
+    },
+    {
+      "station_name": "YouBike2.0_瑞湖陽光街口",
+      "district": "內湖區",
+      "available_bikes": 0,
+      "empty_docks": 34,
+      "total_docks": 34
+    },
+    {
       "station_name": "YouBike2.0_康樂公園西北側",
       "district": "中山區",
       "available_bikes": 0,
@@ -2087,11 +2094,18 @@
       "total_docks": 18
     },
     {
-      "station_name": "YouBike2.0_薇閣高中",
-      "district": "北投區",
+      "station_name": "YouBike2.0_八德市場(北側)",
+      "district": "中山區",
       "available_bikes": 0,
-      "empty_docks": 21,
-      "total_docks": 21
+      "empty_docks": 29,
+      "total_docks": 29
+    },
+    {
+      "station_name": "YouBike2.0_北安明水路口(自強隧道)",
+      "district": "中山區",
+      "available_bikes": 0,
+      "empty_docks": 12,
+      "total_docks": 12
     },
     {
       "station_name": "YouBike2.0_復盛公園",
@@ -2099,6 +2113,20 @@
       "available_bikes": 0,
       "empty_docks": 37,
       "total_docks": 37
+    },
+    {
+      "station_name": "YouBike2.0_西松高中(健康路325巷)",
+      "district": "松山區",
+      "available_bikes": 0,
+      "empty_docks": 31,
+      "total_docks": 31
+    },
+    {
+      "station_name": "YouBike2.0_民生郵局",
+      "district": "松山區",
+      "available_bikes": 0,
+      "empty_docks": 14,
+      "total_docks": 14
     },
     {
       "station_name": "YouBike2.0_捷運南京復興站(7號出口)",
@@ -2115,39 +2143,11 @@
       "total_docks": 13
     },
     {
-      "station_name": "YouBike2.0_民生郵局",
-      "district": "松山區",
+      "station_name": "YouBike2.0_薇閣高中",
+      "district": "北投區",
       "available_bikes": 0,
-      "empty_docks": 14,
-      "total_docks": 14
-    },
-    {
-      "station_name": "YouBike2.0_松山高中",
-      "district": "信義區",
-      "available_bikes": 0,
-      "empty_docks": 40,
-      "total_docks": 42
-    },
-    {
-      "station_name": "YouBike2.0_松山家商",
-      "district": "信義區",
-      "available_bikes": 0,
-      "empty_docks": 40,
-      "total_docks": 40
-    },
-    {
-      "station_name": "YouBike2.0_玉東公園(東新街)",
-      "district": "南港區",
-      "available_bikes": 0,
-      "empty_docks": 25,
-      "total_docks": 25
-    },
-    {
-      "station_name": "YouBike2.0_南港公園(東新街170巷)",
-      "district": "南港區",
-      "available_bikes": 0,
-      "empty_docks": 16,
-      "total_docks": 16
+      "empty_docks": 21,
+      "total_docks": 21
     },
     {
       "station_name": "YouBike2.0_臺大明達館機車停車場",
@@ -2157,32 +2157,32 @@
       "total_docks": 28
     },
     {
-      "station_name": "YouBike2.0_臺大電機二館東南側",
-      "district": "臺大公館校區",
-      "available_bikes": 0,
-      "empty_docks": 14,
-      "total_docks": 14
-    },
-    {
-      "station_name": "YouBike2.0_臺大管理學院一館",
-      "district": "臺大公館校區",
-      "available_bikes": 0,
-      "empty_docks": 17,
-      "total_docks": 17
-    },
-    {
-      "station_name": "YouBike2.0_洛陽停車場",
+      "station_name": "YouBike2.0_復華花園新城",
       "district": "萬華區",
       "available_bikes": 0,
-      "empty_docks": 22,
-      "total_docks": 22
+      "empty_docks": 0,
+      "total_docks": 32
     },
     {
-      "station_name": "YouBike2.0_臺大男八舍東側",
-      "district": "臺大公館校區",
+      "station_name": "YouBike2.0_捷運龍山寺站(1號出口)",
+      "district": "萬華區",
       "available_bikes": 0,
-      "empty_docks": 42,
-      "total_docks": 42
+      "empty_docks": 11,
+      "total_docks": 11
+    },
+    {
+      "station_name": "YouBike2.0_和平東路三段341巷口",
+      "district": "信義區",
+      "available_bikes": 0,
+      "empty_docks": 50,
+      "total_docks": 50
+    },
+    {
+      "station_name": "YouBike2.0_綠堤公園(西北側)",
+      "district": "萬華區",
+      "available_bikes": 0,
+      "empty_docks": 9,
+      "total_docks": 9
     },
     {
       "station_name": "YouBike2.0_祥安水岸景觀大廈",
@@ -2206,25 +2206,18 @@
       "total_docks": 11
     },
     {
-      "station_name": "YouBike2.0_和平東路三段341巷口",
+      "station_name": "YouBike2.0_松山家商",
       "district": "信義區",
       "available_bikes": 0,
-      "empty_docks": 50,
-      "total_docks": 50
+      "empty_docks": 40,
+      "total_docks": 40
     },
     {
-      "station_name": "YouBike2.0_復華花園新城",
-      "district": "萬華區",
+      "station_name": "YouBike2.0_松山高中",
+      "district": "信義區",
       "available_bikes": 0,
-      "empty_docks": 0,
-      "total_docks": 32
-    },
-    {
-      "station_name": "YouBike2.0_捷運龍山寺站(1號出口)",
-      "district": "萬華區",
-      "available_bikes": 0,
-      "empty_docks": 11,
-      "total_docks": 11
+      "empty_docks": 40,
+      "total_docks": 42
     },
     {
       "station_name": "YouBike2.0_基隆光復路口",
@@ -2234,39 +2227,46 @@
       "total_docks": 31
     },
     {
-      "station_name": "YouBike2.0_捷運芝山站(1號出口)",
-      "district": "士林區",
-      "available_bikes": 1,
-      "empty_docks": 32,
-      "total_docks": 35
+      "station_name": "YouBike2.0_洛陽停車場",
+      "district": "萬華區",
+      "available_bikes": 0,
+      "empty_docks": 22,
+      "total_docks": 22
     },
     {
-      "station_name": "YouBike2.0_大同16號廣場",
-      "district": "大同區",
-      "available_bikes": 1,
-      "empty_docks": 13,
-      "total_docks": 14
+      "station_name": "YouBike2.0_南港公園(東新街170巷)",
+      "district": "南港區",
+      "available_bikes": 0,
+      "empty_docks": 16,
+      "total_docks": 16
     },
     {
-      "station_name": "YouBike2.0_臺大國青大樓宿舍前",
-      "district": "大安區",
+      "station_name": "YouBike2.0_政大水岸電梯",
+      "district": "文山區",
       "available_bikes": 1,
-      "empty_docks": 19,
-      "total_docks": 20
+      "empty_docks": 9,
+      "total_docks": 10
     },
     {
-      "station_name": "YouBike2.0_臺科大側門(基隆路四段73巷)",
-      "district": "大安區",
+      "station_name": "YouBike2.0_莒光大埔街口",
+      "district": "中正區",
       "available_bikes": 1,
-      "empty_docks": 34,
-      "total_docks": 35
+      "empty_docks": 31,
+      "total_docks": 32
     },
     {
-      "station_name": "YouBike2.0_西松高中(健康路325巷)",
+      "station_name": "YouBike2.0_景美國小",
+      "district": "文山區",
+      "available_bikes": 1,
+      "empty_docks": 24,
+      "total_docks": 25
+    },
+    {
+      "station_name": "YouBike2.0_三軍總醫院(松山分院)",
       "district": "松山區",
       "available_bikes": 1,
-      "empty_docks": 30,
-      "total_docks": 31
+      "empty_docks": 42,
+      "total_docks": 43
     },
     {
       "station_name": "YouBike2.0_健康社會住宅",
@@ -2276,18 +2276,18 @@
       "total_docks": 20
     },
     {
-      "station_name": "YouBike2.0_民生國小(敦化北路199巷)",
-      "district": "松山區",
+      "station_name": "YouBike2.0_珠海路(48號公園)",
+      "district": "北投區",
       "available_bikes": 1,
-      "empty_docks": 19,
-      "total_docks": 20
+      "empty_docks": 20,
+      "total_docks": 21
     },
     {
-      "station_name": "YouBike2.0_瑞湖陽光街口",
-      "district": "內湖區",
+      "station_name": "YouBike2.0_西松高中",
+      "district": "松山區",
       "available_bikes": 1,
-      "empty_docks": 33,
-      "total_docks": 34
+      "empty_docks": 13,
+      "total_docks": 14
     },
     {
       "station_name": "YouBike2.0_港墘路1巷口",
@@ -2304,32 +2304,18 @@
       "total_docks": 31
     },
     {
-      "station_name": "YouBike2.0_西松高中",
-      "district": "松山區",
-      "available_bikes": 1,
-      "empty_docks": 13,
-      "total_docks": 14
-    },
-    {
-      "station_name": "YouBike2.0_文林北明德路口(東北側)",
-      "district": "北投區",
-      "available_bikes": 1,
-      "empty_docks": 14,
-      "total_docks": 15
-    },
-    {
-      "station_name": "YouBike2.0_捷運文德站(2號出口)",
+      "station_name": "YouBike2.0_捷運東湖站(3號出口)",
       "district": "內湖區",
       "available_bikes": 1,
-      "empty_docks": 48,
-      "total_docks": 49
+      "empty_docks": 29,
+      "total_docks": 30
     },
     {
-      "station_name": "YouBike2.0_濱江國中",
-      "district": "中山區",
+      "station_name": "YouBike2.0_民生國小(敦化北路199巷)",
+      "district": "松山區",
       "available_bikes": 1,
-      "empty_docks": 30,
-      "total_docks": 31
+      "empty_docks": 19,
+      "total_docks": 20
     },
     {
       "station_name": "YouBike2.0_臺北市立中山女高",
@@ -2339,6 +2325,20 @@
       "total_docks": 33
     },
     {
+      "station_name": "YouBike2.0_林森公園東北側",
+      "district": "中山區",
+      "available_bikes": 1,
+      "empty_docks": 17,
+      "total_docks": 18
+    },
+    {
+      "station_name": "YouBike2.0_建國北路高架橋下停車場G區",
+      "district": "中山區",
+      "available_bikes": 1,
+      "empty_docks": 17,
+      "total_docks": 18
+    },
+    {
       "station_name": "YouBike2.0_市民安東街口",
       "district": "中山區",
       "available_bikes": 1,
@@ -2346,11 +2346,11 @@
       "total_docks": 36
     },
     {
-      "station_name": "YouBike2.0_中山民族路口",
-      "district": "中山區",
+      "station_name": "YouBike2.0_捷運善導寺站(3號出口)(忠孝東路側)",
+      "district": "中正區",
       "available_bikes": 1,
-      "empty_docks": 15,
-      "total_docks": 16
+      "empty_docks": 30,
+      "total_docks": 31
     },
     {
       "station_name": "YouBike2.0_臺北市立美術館",
@@ -2367,130 +2367,32 @@
       "total_docks": 40
     },
     {
-      "station_name": "YouBike2.0_捷運善導寺站(3號出口)(忠孝東路側)",
+      "station_name": "YouBike2.0_林森濟南路口(東北側)",
       "district": "中正區",
       "available_bikes": 1,
-      "empty_docks": 30,
-      "total_docks": 31
+      "empty_docks": 25,
+      "total_docks": 26
     },
     {
-      "station_name": "YouBike2.0_捷運中山站(5號出口)",
-      "district": "大同區",
-      "available_bikes": 1,
-      "empty_docks": 17,
-      "total_docks": 18
-    },
-    {
-      "station_name": "YouBike2.0_珠海路(48號公園)",
-      "district": "北投區",
-      "available_bikes": 1,
-      "empty_docks": 20,
-      "total_docks": 21
-    },
-    {
-      "station_name": "YouBike2.0_中華路二段409巷口",
-      "district": "中正區",
-      "available_bikes": 1,
-      "empty_docks": 14,
-      "total_docks": 15
-    },
-    {
-      "station_name": "YouBike2.0_捷運臺電大樓站(4號出口)",
-      "district": "中正區",
-      "available_bikes": 1,
-      "empty_docks": 12,
-      "total_docks": 13
-    },
-    {
-      "station_name": "YouBike2.0_景美國小",
-      "district": "文山區",
+      "station_name": "YouBike2.0_捷運南京復興站(8號出口)",
+      "district": "中山區",
       "available_bikes": 1,
       "empty_docks": 24,
       "total_docks": 25
     },
     {
-      "station_name": "YouBike2.0_政大水岸電梯",
-      "district": "文山區",
-      "available_bikes": 1,
-      "empty_docks": 9,
-      "total_docks": 10
-    },
-    {
-      "station_name": "YouBike2.0_樹德公園",
-      "district": "大同區",
-      "available_bikes": 1,
-      "empty_docks": 13,
-      "total_docks": 14
-    },
-    {
-      "station_name": "YouBike2.0_喬治工商",
+      "station_name": "YouBike2.0_臺大土木研究大樓前",
       "district": "大安區",
       "available_bikes": 1,
-      "empty_docks": 21,
-      "total_docks": 22
+      "empty_docks": 23,
+      "total_docks": 24
     },
     {
-      "station_name": "YouBike2.0_忠孝建國路口(東南側)",
-      "district": "大安區",
+      "station_name": "YouBike2.0_新生農安街口",
+      "district": "中山區",
       "available_bikes": 1,
-      "empty_docks": 20,
-      "total_docks": 21
-    },
-    {
-      "station_name": "YouBike2.0_仁愛敦南圓環(東南側)",
-      "district": "大安區",
-      "available_bikes": 1,
-      "empty_docks": 15,
-      "total_docks": 16
-    },
-    {
-      "station_name": "YouBike2.0_昌隆公園",
-      "district": "大安區",
-      "available_bikes": 1,
-      "empty_docks": 15,
-      "total_docks": 16
-    },
-    {
-      "station_name": "YouBike2.0_大安高工",
-      "district": "大安區",
-      "available_bikes": 1,
-      "empty_docks": 21,
-      "total_docks": 23
-    },
-    {
-      "station_name": "YouBike2.0_臺大法人語言訓練中心前",
-      "district": "大安區",
-      "available_bikes": 1,
-      "empty_docks": 27,
-      "total_docks": 28
-    },
-    {
-      "station_name": "YouBike2.0_臺大社科院圖書館前",
-      "district": "大安區",
-      "available_bikes": 1,
-      "empty_docks": 26,
-      "total_docks": 27
-    },
-    {
-      "station_name": "YouBike2.0_臺灣科技大學後門",
-      "district": "大安區",
-      "available_bikes": 1,
-      "empty_docks": 38,
-      "total_docks": 39
-    },
-    {
-      "station_name": "YouBike2.0_辛亥復興路口西北側",
-      "district": "大安區",
-      "available_bikes": 1,
-      "empty_docks": 15,
-      "total_docks": 16
-    },
-    {
-      "station_name": "YouBike2.0_捷運臺電大樓站(5號出口)",
-      "district": "中正區",
-      "available_bikes": 1,
-      "empty_docks": 20,
-      "total_docks": 21
+      "empty_docks": 14,
+      "total_docks": 15
     },
     {
       "station_name": "YouBike2.0_臺北自來水事業處",
@@ -2500,21 +2402,105 @@
       "total_docks": 20
     },
     {
-      "station_name": "YouBike2.0_永吉路468巷口",
-      "district": "信義區",
+      "station_name": "YouBike2.0_社子島島頭公園",
+      "district": "士林區",
       "available_bikes": 1,
-      "empty_docks": 12,
-      "total_docks": 13
+      "empty_docks": 21,
+      "total_docks": 22
     },
     {
-      "station_name": "YouBike2.0_臺大森林館北側",
+      "station_name": "YouBike2.0_樹德公園",
+      "district": "大同區",
+      "available_bikes": 1,
+      "empty_docks": 13,
+      "total_docks": 14
+    },
+    {
+      "station_name": "YouBike2.0_大同16號廣場",
+      "district": "大同區",
+      "available_bikes": 1,
+      "empty_docks": 13,
+      "total_docks": 14
+    },
+    {
+      "station_name": "YouBike2.0_捷運科技大樓站(2號出口)",
+      "district": "大安區",
+      "available_bikes": 1,
+      "empty_docks": 71,
+      "total_docks": 72
+    },
+    {
+      "station_name": "YouBike2.0_捷運大安站(2號出口)",
+      "district": "大安區",
+      "available_bikes": 1,
+      "empty_docks": 59,
+      "total_docks": 60
+    },
+    {
+      "station_name": "YouBike2.0_臺大法人語言訓練中心前",
+      "district": "大安區",
+      "available_bikes": 1,
+      "empty_docks": 27,
+      "total_docks": 28
+    },
+    {
+      "station_name": "YouBike2.0_忠孝建國路口(東南側)",
+      "district": "大安區",
+      "available_bikes": 1,
+      "empty_docks": 20,
+      "total_docks": 21
+    },
+    {
+      "station_name": "YouBike2.0_捷運忠孝復興站(3號出口)",
+      "district": "大安區",
+      "available_bikes": 1,
+      "empty_docks": 36,
+      "total_docks": 37
+    },
+    {
+      "station_name": "YouBike2.0_臺大國青大樓宿舍前",
+      "district": "大安區",
+      "available_bikes": 1,
+      "empty_docks": 19,
+      "total_docks": 20
+    },
+    {
+      "station_name": "YouBike2.0_臺大電機二館東南側",
+      "district": "臺大公館校區",
+      "available_bikes": 1,
+      "empty_docks": 13,
+      "total_docks": 14
+    },
+    {
+      "station_name": "YouBike2.0_臺大圖資系館北側",
+      "district": "臺大公館校區",
+      "available_bikes": 1,
+      "empty_docks": 50,
+      "total_docks": 51
+    },
+    {
+      "station_name": "YouBike2.0_臺大管理學院一館",
+      "district": "臺大公館校區",
+      "available_bikes": 1,
+      "empty_docks": 16,
+      "total_docks": 17
+    },
+    {
+      "station_name": "YouBike2.0_臺大二號館",
       "district": "臺大公館校區",
       "available_bikes": 1,
       "empty_docks": 9,
       "total_docks": 10
     },
     {
-      "station_name": "YouBike2.0_臺大四號館東北側",
+      "station_name": "YouBike2.0_臺大凝態館南側",
+      "district": "臺大公館校區",
+      "available_bikes": 1,
+      "empty_docks": 19,
+      "total_docks": 20
+    },
+    {
+      "station_name": "YouBike2.0_臺大森林館北側",
       "district": "臺大公館校區",
       "available_bikes": 1,
       "empty_docks": 9,
@@ -2528,39 +2514,60 @@
       "total_docks": 26
     },
     {
-      "station_name": "YouBike2.0_臺大圖資系館北側",
-      "district": "臺大公館校區",
-      "available_bikes": 1,
-      "empty_docks": 50,
-      "total_docks": 51
-    },
-    {
-      "station_name": "YouBike2.0_臺大二號館",
+      "station_name": "YouBike2.0_臺大四號館東北側",
       "district": "臺大公館校區",
       "available_bikes": 1,
       "empty_docks": 9,
       "total_docks": 10
     },
     {
-      "station_name": "YouBike2.0_育成高中",
-      "district": "南港區",
+      "station_name": "YouBike2.0_臺大鄭江樓北側",
+      "district": "臺大公館校區",
       "available_bikes": 1,
-      "empty_docks": 32,
-      "total_docks": 33
+      "empty_docks": 39,
+      "total_docks": 40
     },
     {
-      "station_name": "YouBike2.0_南港路三段290巷口",
-      "district": "南港區",
-      "available_bikes": 1,
-      "empty_docks": 18,
-      "total_docks": 20
-    },
-    {
-      "station_name": "YouBike2.0_綠堤公園(西北側)",
+      "station_name": "YouBike2.0_青年公園4號出口",
       "district": "萬華區",
       "available_bikes": 1,
-      "empty_docks": 8,
-      "total_docks": 9
+      "empty_docks": 23,
+      "total_docks": 24
+    },
+    {
+      "station_name": "YouBike2.0_青年公園(西藏路125巷口)",
+      "district": "萬華區",
+      "available_bikes": 1,
+      "empty_docks": 17,
+      "total_docks": 18
+    },
+    {
+      "station_name": "YouBike2.0_捷運市政府站(4號出口)",
+      "district": "信義區",
+      "available_bikes": 1,
+      "empty_docks": 16,
+      "total_docks": 18
+    },
+    {
+      "station_name": "YouBike2.0_松友公園",
+      "district": "信義區",
+      "available_bikes": 1,
+      "empty_docks": 38,
+      "total_docks": 39
+    },
+    {
+      "station_name": "YouBike2.0_永吉路468巷口",
+      "district": "信義區",
+      "available_bikes": 1,
+      "empty_docks": 12,
+      "total_docks": 13
+    },
+    {
+      "station_name": "YouBike2.0_玉東公園(東新街)",
+      "district": "南港區",
+      "available_bikes": 1,
+      "empty_docks": 24,
+      "total_docks": 25
     },
     {
       "station_name": "YouBike2.0_廣慈博愛園區(西側)",
@@ -2577,60 +2584,67 @@
       "total_docks": 26
     },
     {
-      "station_name": "YouBike2.0_華江污水廠",
+      "station_name": "YouBike2.0_龍山國中",
       "district": "萬華區",
       "available_bikes": 1,
-      "empty_docks": 19,
-      "total_docks": 20
+      "empty_docks": 13,
+      "total_docks": 15
     },
     {
-      "station_name": "YouBike2.0_青年公園4號出口",
-      "district": "萬華區",
+      "station_name": "YouBike2.0_合心廣場",
+      "district": "南港區",
       "available_bikes": 1,
-      "empty_docks": 23,
-      "total_docks": 24
+      "empty_docks": 42,
+      "total_docks": 43
     },
     {
-      "station_name": "YouBike2.0_士林區農會社子分部",
-      "district": "士林區",
-      "available_bikes": 2,
-      "empty_docks": 6,
-      "total_docks": 8
+      "station_name": "YouBike2.0_光復延壽街口(西北側)",
+      "district": "松山區",
+      "available_bikes": 1,
+      "empty_docks": 22,
+      "total_docks": 23
     },
     {
-      "station_name": "YouBike2.0_師範大學公館校區",
-      "district": "文山區",
-      "available_bikes": 2,
-      "empty_docks": 12,
-      "total_docks": 14
+      "station_name": "YouBike2.0_興中立體停車場(興中路)",
+      "district": "南港區",
+      "available_bikes": 1,
+      "empty_docks": 25,
+      "total_docks": 26
     },
     {
-      "station_name": "YouBike2.0_文林路101巷口",
-      "district": "士林區",
-      "available_bikes": 2,
-      "empty_docks": 15,
-      "total_docks": 17
+      "station_name": "YouBike2.0_育成高中",
+      "district": "南港區",
+      "available_bikes": 1,
+      "empty_docks": 32,
+      "total_docks": 33
     },
     {
-      "station_name": "YouBike2.0_和平公園東側",
+      "station_name": "YouBike2.0_公館公園",
       "district": "大安區",
-      "available_bikes": 2,
-      "empty_docks": 9,
+      "available_bikes": 1,
+      "empty_docks": 29,
+      "total_docks": 30
+    },
+    {
+      "station_name": "YouBike2.0_復興南路二段340巷口",
+      "district": "大安區",
+      "available_bikes": 1,
+      "empty_docks": 10,
       "total_docks": 11
     },
     {
-      "station_name": "YouBike2.0_臺大環研大樓",
+      "station_name": "YouBike2.0_辛亥復興路口西北側",
       "district": "大安區",
-      "available_bikes": 2,
-      "empty_docks": 39,
-      "total_docks": 41
+      "available_bikes": 1,
+      "empty_docks": 15,
+      "total_docks": 16
     },
     {
-      "station_name": "YouBike2.0_國北教大側門南側",
+      "station_name": "YouBike2.0_臺大醫學院附設癌醫中心",
       "district": "大安區",
       "available_bikes": 2,
-      "empty_docks": 32,
-      "total_docks": 34
+      "empty_docks": 18,
+      "total_docks": 20
     },
     {
       "station_name": "YouBike2.0_臥龍公園",
@@ -2640,60 +2654,32 @@
       "total_docks": 25
     },
     {
-      "station_name": "YouBike2.0_社子國小",
+      "station_name": "YouBike2.0_忠誠公園",
       "district": "士林區",
       "available_bikes": 2,
-      "empty_docks": 9,
-      "total_docks": 11
+      "empty_docks": 23,
+      "total_docks": 25
     },
     {
-      "station_name": "YouBike2.0_市立圖書館葫蘆堵分館",
-      "district": "士林區",
+      "station_name": "YouBike2.0_大同運動中心",
+      "district": "大同區",
+      "available_bikes": 2,
+      "empty_docks": 13,
+      "total_docks": 16
+    },
+    {
+      "station_name": "YouBike2.0_信義大安路口(信維大樓)",
+      "district": "大安區",
       "available_bikes": 2,
       "empty_docks": 16,
       "total_docks": 18
     },
     {
-      "station_name": "YouBike2.0_大安路二段90巷口",
+      "station_name": "YouBike2.0_昌隆公園",
       "district": "大安區",
       "available_bikes": 2,
-      "empty_docks": 17,
-      "total_docks": 19
-    },
-    {
-      "station_name": "YouBike2.0_捷運科技大樓站(2號出口)",
-      "district": "大安區",
-      "available_bikes": 2,
-      "empty_docks": 70,
-      "total_docks": 72
-    },
-    {
-      "station_name": "YouBike2.0_復興南路二段340巷口",
-      "district": "大安區",
-      "available_bikes": 2,
-      "empty_docks": 9,
-      "total_docks": 11
-    },
-    {
-      "station_name": "YouBike2.0_捷運大安站(2號出口)",
-      "district": "大安區",
-      "available_bikes": 2,
-      "empty_docks": 58,
-      "total_docks": 60
-    },
-    {
-      "station_name": "YouBike2.0_捷運忠孝敦化站(2號出口)",
-      "district": "大安區",
-      "available_bikes": 2,
-      "empty_docks": 15,
-      "total_docks": 17
-    },
-    {
-      "station_name": "YouBike2.0_仁愛路四段122巷口",
-      "district": "大安區",
-      "available_bikes": 2,
-      "empty_docks": 23,
-      "total_docks": 25
+      "empty_docks": 14,
+      "total_docks": 16
     },
     {
       "station_name": "YouBike2.0_信義路三段134巷口",
@@ -2703,11 +2689,25 @@
       "total_docks": 28
     },
     {
-      "station_name": "YouBike2.0_捷運大安站(3號出口)",
+      "station_name": "YouBike2.0_國北教大側門南側",
       "district": "大安區",
       "available_bikes": 2,
-      "empty_docks": 44,
-      "total_docks": 46
+      "empty_docks": 32,
+      "total_docks": 34
+    },
+    {
+      "station_name": "YouBike2.0_臺大環研大樓",
+      "district": "大安區",
+      "available_bikes": 2,
+      "empty_docks": 39,
+      "total_docks": 41
+    },
+    {
+      "station_name": "YouBike2.0_臺大男六舍前",
+      "district": "大安區",
+      "available_bikes": 2,
+      "empty_docks": 38,
+      "total_docks": 40
     },
     {
       "station_name": "YouBike2.0_民權運動公園(北側)",
@@ -2731,13 +2731,6 @@
       "total_docks": 27
     },
     {
-      "station_name": "YouBike2.0_三軍總醫院(松山分院)",
-      "district": "松山區",
-      "available_bikes": 2,
-      "empty_docks": 41,
-      "total_docks": 43
-    },
-    {
       "station_name": "YouBike2.0_新東公園",
       "district": "松山區",
       "available_bikes": 2,
@@ -2752,6 +2745,13 @@
       "total_docks": 19
     },
     {
+      "station_name": "YouBike2.0_光明溫泉路口",
+      "district": "北投區",
+      "available_bikes": 2,
+      "empty_docks": 28,
+      "total_docks": 30
+    },
+    {
       "station_name": "YouBike2.0_捷運忠義站(2號出口)",
       "district": "北投區",
       "available_bikes": 2,
@@ -2759,11 +2759,11 @@
       "total_docks": 33
     },
     {
-      "station_name": "YouBike2.0_中國電影製片廠",
-      "district": "北投區",
+      "station_name": "YouBike2.0_下灣公園(成功路)",
+      "district": "內湖區",
       "available_bikes": 2,
-      "empty_docks": 13,
-      "total_docks": 15
+      "empty_docks": 14,
+      "total_docks": 16
     },
     {
       "station_name": "YouBike2.0_西湖公園(內湖路一段387巷)",
@@ -2794,88 +2794,39 @@
       "total_docks": 25
     },
     {
-      "station_name": "YouBike2.0_光明溫泉路口",
+      "station_name": "YouBike2.0_捷運明德站(1號出口)",
       "district": "北投區",
       "available_bikes": 2,
-      "empty_docks": 28,
-      "total_docks": 30
+      "empty_docks": 21,
+      "total_docks": 23
     },
     {
-      "station_name": "YouBike2.0_新生農安街口",
-      "district": "中山區",
+      "station_name": "YouBike2.0_中國電影製片廠",
+      "district": "北投區",
       "available_bikes": 2,
       "empty_docks": 13,
       "total_docks": 15
     },
     {
-      "station_name": "YouBike2.0_撫順街41巷(崇德宮前)",
+      "station_name": "YouBike2.0_德惠雙城街口(西側)",
       "district": "中山區",
       "available_bikes": 2,
-      "empty_docks": 17,
-      "total_docks": 19
+      "empty_docks": 16,
+      "total_docks": 18
     },
     {
-      "station_name": "YouBike2.0_長安林森路口公車站",
-      "district": "中山區",
+      "station_name": "YouBike2.0_捷運文德站(2號出口)",
+      "district": "內湖區",
       "available_bikes": 2,
-      "empty_docks": 18,
-      "total_docks": 20
+      "empty_docks": 47,
+      "total_docks": 49
     },
     {
-      "station_name": "YouBike2.0_華山公園",
-      "district": "中山區",
-      "available_bikes": 2,
-      "empty_docks": 20,
-      "total_docks": 22
-    },
-    {
-      "station_name": "YouBike2.0_新生長春路口",
-      "district": "中山區",
-      "available_bikes": 2,
-      "empty_docks": 30,
-      "total_docks": 32
-    },
-    {
-      "station_name": "YouBike2.0_大直街94巷",
-      "district": "中山區",
-      "available_bikes": 2,
-      "empty_docks": 11,
-      "total_docks": 13
-    },
-    {
-      "station_name": "YouBike2.0_樂群二明水路口",
+      "station_name": "YouBike2.0_建國長安路口",
       "district": "中山區",
       "available_bikes": 2,
       "empty_docks": 18,
       "total_docks": 20
-    },
-    {
-      "station_name": "YouBike2.0_自來水園區",
-      "district": "中正區",
-      "available_bikes": 2,
-      "empty_docks": 38,
-      "total_docks": 40
-    },
-    {
-      "station_name": "YouBike2.0_弘道國中",
-      "district": "中正區",
-      "available_bikes": 2,
-      "empty_docks": 31,
-      "total_docks": 33
-    },
-    {
-      "station_name": "YouBike2.0_莒光大埔街口",
-      "district": "中正區",
-      "available_bikes": 2,
-      "empty_docks": 30,
-      "total_docks": 32
-    },
-    {
-      "station_name": "YouBike2.0_忠義實小",
-      "district": "中正區",
-      "available_bikes": 2,
-      "empty_docks": 15,
-      "total_docks": 17
     },
     {
       "station_name": "YouBike2.0_松江路77巷口",
@@ -2885,11 +2836,60 @@
       "total_docks": 10
     },
     {
+      "station_name": "YouBike2.0_華山公園",
+      "district": "中山區",
+      "available_bikes": 2,
+      "empty_docks": 20,
+      "total_docks": 22
+    },
+    {
+      "station_name": "YouBike2.0_中山民族路口",
+      "district": "中山區",
+      "available_bikes": 2,
+      "empty_docks": 14,
+      "total_docks": 16
+    },
+    {
       "station_name": "YouBike2.0_長春一江街口",
       "district": "中山區",
       "available_bikes": 2,
       "empty_docks": 9,
       "total_docks": 11
+    },
+    {
+      "station_name": "YouBike2.0_撫順街41巷(崇德宮前)",
+      "district": "中山區",
+      "available_bikes": 2,
+      "empty_docks": 17,
+      "total_docks": 19
+    },
+    {
+      "station_name": "YouBike2.0_捷運臺大醫院站(1號出口)",
+      "district": "中正區",
+      "available_bikes": 2,
+      "empty_docks": 17,
+      "total_docks": 19
+    },
+    {
+      "station_name": "YouBike2.0_忠義實小",
+      "district": "中正區",
+      "available_bikes": 2,
+      "empty_docks": 15,
+      "total_docks": 17
+    },
+    {
+      "station_name": "YouBike2.0_市立圖書館葫蘆堵分館",
+      "district": "士林區",
+      "available_bikes": 2,
+      "empty_docks": 16,
+      "total_docks": 18
+    },
+    {
+      "station_name": "YouBike2.0_師範大學公館校區",
+      "district": "文山區",
+      "available_bikes": 2,
+      "empty_docks": 12,
+      "total_docks": 14
     },
     {
       "station_name": "YouBike2.0_前港公園(前港街)",
@@ -2899,11 +2899,25 @@
       "total_docks": 27
     },
     {
-      "station_name": "YouBike2.0_大同運動中心",
-      "district": "大同區",
+      "station_name": "YouBike2.0_社子國小",
+      "district": "士林區",
+      "available_bikes": 2,
+      "empty_docks": 9,
+      "total_docks": 11
+    },
+    {
+      "station_name": "YouBike2.0_羅斯福三段金門街口",
+      "district": "中正區",
       "available_bikes": 2,
       "empty_docks": 13,
-      "total_docks": 16
+      "total_docks": 15
+    },
+    {
+      "station_name": "YouBike2.0_捷運臺電大樓站(4號出口)",
+      "district": "中正區",
+      "available_bikes": 2,
+      "empty_docks": 11,
+      "total_docks": 13
     },
     {
       "station_name": "YouBike2.0_達賢圖書館",
@@ -2913,18 +2927,46 @@
       "total_docks": 27
     },
     {
-      "station_name": "YouBike2.0_興中立體停車場(興中路)",
-      "district": "南港區",
+      "station_name": "YouBike2.0_中華路一段21巷口",
+      "district": "中正區",
+      "available_bikes": 2,
+      "empty_docks": 20,
+      "total_docks": 22
+    },
+    {
+      "station_name": "YouBike2.0_大安路二段90巷口",
+      "district": "大安區",
+      "available_bikes": 2,
+      "empty_docks": 17,
+      "total_docks": 19
+    },
+    {
+      "station_name": "YouBike2.0_師大附中運動中心",
+      "district": "大安區",
+      "available_bikes": 2,
+      "empty_docks": 31,
+      "total_docks": 33
+    },
+    {
+      "station_name": "YouBike2.0_捷運大安站(5號出口)",
+      "district": "大安區",
       "available_bikes": 2,
       "empty_docks": 24,
       "total_docks": 26
     },
     {
-      "station_name": "YouBike2.0_富錦新東街口(西側)",
-      "district": "松山區",
+      "station_name": "YouBike2.0_華江污水廠",
+      "district": "萬華區",
       "available_bikes": 2,
-      "empty_docks": 11,
-      "total_docks": 13
+      "empty_docks": 18,
+      "total_docks": 20
+    },
+    {
+      "station_name": "YouBike2.0_南港路三段290巷口",
+      "district": "南港區",
+      "available_bikes": 2,
+      "empty_docks": 17,
+      "total_docks": 20
     },
     {
       "station_name": "YouBike2.0_民生東路五段137巷6弄口",
@@ -2934,46 +2976,11 @@
       "total_docks": 16
     },
     {
-      "station_name": "YouBike2.0_臺大第二行政大樓南側",
-      "district": "臺大公館校區",
-      "available_bikes": 2,
-      "empty_docks": 25,
-      "total_docks": 27
-    },
-    {
-      "station_name": "YouBike2.0_青年公園(西藏路125巷口)",
-      "district": "萬華區",
-      "available_bikes": 2,
-      "empty_docks": 16,
-      "total_docks": 18
-    },
-    {
-      "station_name": "YouBike2.0_光復南菸廠路口",
-      "district": "信義區",
-      "available_bikes": 2,
-      "empty_docks": 22,
-      "total_docks": 25
-    },
-    {
-      "station_name": "YouBike2.0_龍山國中",
-      "district": "萬華區",
-      "available_bikes": 2,
-      "empty_docks": 12,
-      "total_docks": 15
-    },
-    {
-      "station_name": "YouBike2.0_光復延壽街口(西北側)",
+      "station_name": "YouBike2.0_富錦新東街口(西側)",
       "district": "松山區",
       "available_bikes": 2,
-      "empty_docks": 21,
-      "total_docks": 23
-    },
-    {
-      "station_name": "YouBike2.0_松友公園",
-      "district": "信義區",
-      "available_bikes": 2,
-      "empty_docks": 37,
-      "total_docks": 39
+      "empty_docks": 11,
+      "total_docks": 13
     },
     {
       "station_name": "YouBike2.0_舊莊派出所",
@@ -2983,25 +2990,11 @@
       "total_docks": 15
     },
     {
-      "station_name": "YouBike2.0_捷運市政府站(4號出口)",
-      "district": "信義區",
+      "station_name": "YouBike2.0_萬華51號公園",
+      "district": "萬華區",
       "available_bikes": 2,
-      "empty_docks": 15,
-      "total_docks": 18
-    },
-    {
-      "station_name": "YouBike2.0_臺大鄭江樓北側",
-      "district": "臺大公館校區",
-      "available_bikes": 2,
-      "empty_docks": 38,
-      "total_docks": 40
-    },
-    {
-      "station_name": "YouBike2.0_臺大凝態館南側",
-      "district": "臺大公館校區",
-      "available_bikes": 2,
-      "empty_docks": 18,
-      "total_docks": 20
+      "empty_docks": 11,
+      "total_docks": 14
     },
     {
       "station_name": "YouBike2.0_臺大人文館",
