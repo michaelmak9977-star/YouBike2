@@ -1,18 +1,12 @@
 {
-  "generated_at": "2026-06-14 04:55:25",
-  "latest_fetched_at": "2026-06-14 04:55:23",
-  "next_run_time": "2026-06-14 05:00:25",
+  "generated_at": "2026-06-14 04:56:05",
+  "latest_fetched_at": "2026-06-14 04:56:02",
+  "next_run_time": "2026-06-14 05:01:05",
   "total_snapshots": 288,
   "total_stations": 1764,
   "total_available_bikes": 21220,
   "total_empty_docks": 27490,
   "trend": [
-    {
-      "fetched_at": "2026-06-13 05:45:31",
-      "available_bikes": 22016,
-      "empty_docks": 26773,
-      "station_count": 1764
-    },
     {
       "fetched_at": "2026-06-13 05:50:27",
       "available_bikes": 22018,
@@ -1731,6 +1725,12 @@
     },
     {
       "fetched_at": "2026-06-14 04:55:23",
+      "available_bikes": 21220,
+      "empty_docks": 27490,
+      "station_count": 1764
+    },
+    {
+      "fetched_at": "2026-06-14 04:56:02",
       "available_bikes": 21220,
       "empty_docks": 27490,
       "station_count": 1764
